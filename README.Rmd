@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 
 # altituder
 
-[![Travis build status](https://travis-ci.org/romainfrancois/rap.svg?branch=master)](https://travis-ci.org/markusdumke/altituder)
+[![Travis build status](https://travis-ci.org/markusdumke/altituder.svg?branch=master)](https://travis-ci.org/markusdumke/altituder)
 
 An R package to get altitude (elevation) data from several APIs.
 
