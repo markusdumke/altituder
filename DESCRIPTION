@@ -1,0 +1,21 @@
+Package: altituder
+Type: Package
+Title: Query Altitude (Elevation) Data From APIs
+Version: 0.1.0
+Authors@R: c(person("Markus", "Dumke", email = "markusdumke@gmail.com", role = c("aut", "cre")))
+BugReports: https://github.com/markusdumke/altituder
+Maintainer: Markus Dumke <markusdumke@gmail.com>
+Description: Query Altitude (Elevation) Data From APIs.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.0
+Roxygen: list(markdown = TRUE)
+Imports: 
+    checkmate,
+    httr,
+    magrittr,
+    purrr,
+    RJSONIO,
+    stringr,
+    XML
