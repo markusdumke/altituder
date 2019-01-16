@@ -28,8 +28,8 @@ get_altitude(.longitude = 11, .latitude = 48)
 #> [1] 647
 
 # Input is a data.frame
-get_altitude(.Data = data.frame(longitude = 11, latitude = 48))
-#> [1] 647
+get_altitude(.Data = data.frame(longitude = 10:12, latitude = 48:50))
+#> [1] 650 528 777
 ```
 
 Which API can be specified via the `.src` argument. Currently supported are:

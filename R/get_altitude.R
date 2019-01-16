@@ -113,12 +113,12 @@ get_altitude_geonames <- function(.Data, .geonames.username) {
 
 
 get_altitude_racemap <- function(.Data) {
-  if (NROW(.Data) != 1L)
-    stop("Currently the implementation only supports one coordinate pair per query.")
-  query <- stringr::str_interp("https://elevation.racemap.com/api?lat=${LATITUDE}&lng=${LONGITUDE}",
-                               list(LATITUDE = .Data$latitude, LONGITUDE = .Data$longitude))
+  query <- stringr::str_c("[", .Data$latitude, ", ",
+                          .Data$longitude, "]", collapse = ", ")
 
-  res <- httr::GET(query)
+  res <- httr::POST("https://elevation.racemap.com/api",
+                    body = stringr::str_c("[", query, "]"),
+                    encode = "json")
   httr::content(res) %>% as.integer()
 }
 
